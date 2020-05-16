@@ -4,7 +4,7 @@ SolidiFI-benchmark repository contains the dataset of the buggy contracts used t
 
 This dataset can be used to evaluate other analysis tools.
 
-##Structure
+## Structure
   Following are more details on the location of those items.
   
    the folder named "results" contains all the data related to the evaluation experiments conducted in the paper. 
