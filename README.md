@@ -7,7 +7,7 @@ This dataset can be used to evaluate other analysis tools.
 ## Structure
   Following are more details on the location of those items.
   
-   the folder named "results" contains all the data related to the evaluation experiments conducted in the paper. 
+   The folder named "results" contains all the data related to the evaluation experiments conducted in the paper. 
   
    Following is an example of results folder structure:
     
