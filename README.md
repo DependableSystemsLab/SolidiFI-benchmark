@@ -29,7 +29,7 @@ This dataset can be used to evaluate other analysis tools.
       |=> Manticore
       |=> Slither   	   
       
-  ## Reproducing the paper evaluation results
+  ## Reproducing evaluation results presented in the paper
   
   We are also providing a Python script that inspects the tools' reports 
 	for false positives and false negatives. This script can be used to reproduce the results presented in the paper.
