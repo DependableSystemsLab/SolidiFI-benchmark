@@ -10,6 +10,13 @@ This dataset has been used to evaluate six smart contract static analysis tools 
 
 This dataset can be used to evaluate other smart contract analysis tools.
 
+Please cite this paper when  you use this dataset.
+
+ ```
+ [To-do]
+ Put citation code here
+  ```
+  
 ## Structure
   
   The folder named "results" contains all the data related to the evaluation experiments conducted in the paper. 
