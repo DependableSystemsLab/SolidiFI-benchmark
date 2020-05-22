@@ -57,4 +57,9 @@ Please cite this paper when  you use this dataset.
   
   The false negatives and false positives will be printed to the console and also stored into two separate folders named "FNs" and   "FPs"
   
-  
+  To reproduce results for only one or specific tools, only list the names of those tools in the command.
+  For example, the following command will reproduce results only for Oyente and Securify. Make sure to separate the names of tools by comma.
+
+ ```
+  python3 scripts/inspection.py Oyente,Securify results
+  ```
