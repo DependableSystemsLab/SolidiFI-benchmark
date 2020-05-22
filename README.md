@@ -18,8 +18,8 @@ This dataset can be used to evaluate other smart contract analysis tools.
     
     
     results
-      | 
-      |=> Oyente
+      |
+	|=> Oyente
 	|
 	|==> analyzed_buggy_contracts (folder)
 	  |
