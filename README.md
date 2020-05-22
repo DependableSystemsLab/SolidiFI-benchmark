@@ -21,9 +21,9 @@ This dataset can be used to evaluate other smart contract analysis tools.
 	|=> Oyente
 	|
 	  |==> analyzed_buggy_contracts (folder)
-	  |		  |
+	  |		  
 	    |==>Re-entrancy (there is a separate folder for each bug type) that contains the following
-			  |
+			  
 	      |==> all the buggy contracts injected by this type of bugs(specified by the name of the folder) along with the injection
               |==> logs for each contract(BugLog)
 				      |
