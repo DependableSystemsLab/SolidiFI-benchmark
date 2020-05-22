@@ -16,6 +16,7 @@ This dataset can be used to evaluate other smart contract analysis tools.
   
    Following is an example of results folder structure:
     
+    
     results
       | 
       |=> Oyente
