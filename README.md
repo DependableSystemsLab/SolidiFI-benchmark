@@ -19,11 +19,11 @@ Please cite this paper when  you use this dataset.
   
 ## Structure
   
-  The folder named "results" contains all the data related to the evaluation experiments conducted in the paper. 
+  The folder named "results" contains all the files of the dataset along with the experimental artifacts of our paper. 
   
    Following is an example of results folder structure:
     
-    
+     
     results
 	|
 	|=> Oyente
@@ -47,7 +47,7 @@ Please cite this paper when  you use this dataset.
   
   To reproduce the results presented in the paper, please run the "inspection.py" script as below.
   
-  The scriptinspects the tools' analysis reports for false positives and false negatives.
+  The script inspects the analysis reports of the evaluated tools for false negatives, false positives, and misidentified bugs.
   
   Running The following command will reproduce results for all evaluated tools at once
   
@@ -55,6 +55,6 @@ Please cite this paper when  you use this dataset.
   python3 scripts/inspection.py Oyente,Securify,Mythril,Smartcheck,Manticore,Slither results
   ```
   
-  The false negatives and false positives will be printed to the console and also stored inside two separate folders named "FNs" and   "FPs"
+  The false negatives and false positives will be printed to the console and also stored into two separate folders named "FNs" and   "FPs"
   
   
