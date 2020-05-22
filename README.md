@@ -23,7 +23,7 @@ Please cite this paper when  you use this dataset.
   
  The folder named "results" contains the experimental artifacts of our paper. 
   
- Following is an example of results folder structure:
+ Following is an example of results folder's structure:
 
       results
 	│ │
