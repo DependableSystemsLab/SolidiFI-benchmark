@@ -18,10 +18,12 @@ Please cite this paper when  you use this dataset.
   ```
   
 ## Structure
+
+ The folder named "buggy_contracts" contains the dataset of the buggy contracts.
   
-  The folder named "results" contains all the files of the dataset along with the experimental artifacts of our paper. 
+ The folder named "results" contains the experimental artifacts of our paper. 
   
-   Following is an example of results folder structure:
+ Following is an example of results folder structure:
 
       results
 	│ │
