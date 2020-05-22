@@ -22,9 +22,8 @@ Please cite this paper when  you use this dataset.
   The folder named "results" contains all the files of the dataset along with the experimental artifacts of our paper. 
   
    Following is an example of results folder structure:
-    
-    ```
-     results
+
+      results
 	│ │
 	│ ├── Oyente
 	│ │ │
@@ -43,8 +42,8 @@ Please cite this paper when  you use this dataset.
 	│ ├── Manticore
 	│ ├── Slither   	   
       
-      ```
-  ## Reproducing evaluation results presented in the paper
+        
+## Reproducing evaluation results presented in the paper
   
   To reproduce the results presented in the paper, please run the "inspection.py" script as below.
   
