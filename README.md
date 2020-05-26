@@ -1,6 +1,6 @@
 # SolidiFI Benchmark
 
-SolidiFI-benchmark repository contains a dataset of buggy contracts injected by 7369 bugs from 7 different bug types, namely, reentrancy, timestamp dependency, uhnadeled exceptions, unchecked send, TOD, integer overflow/underflow, and use of tx.origin.
+SolidiFI-benchmark repository contains a dataset of buggy contracts injected by 9369 bugs from 7 different bug types, namely, reentrancy, timestamp dependency, uhnadeled exceptions, unchecked send, TOD, integer overflow/underflow, and use of tx.origin.
 The bugs have been injected in the contracts using [SolidiFI](https://github.com/DependableSystemsLab/SolidiFI). 
 
 In addition to the dataset of the vulnerable contracts, the repository contains the injection logs that can be used to refrence the injection locations, where the bugs have been injected in the code, and the type of each bug. 
