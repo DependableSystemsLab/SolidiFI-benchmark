@@ -13,8 +13,12 @@ This dataset can be used to evaluate other smart contract analysis tools.
 Please cite this paper when  you use this dataset.
 
  ```
- [To-do]
- Put citation code here
+ @article{ghaleb2020effective,
+  title={How Effective are Smart Contract Analysis Tools? Evaluating Smart Contract Static Analysis Tools Using Bug Injection},
+  author={Ghaleb, Asem and Pattabiraman, Karthik},
+  journal={arXiv preprint arXiv:2005.11613},
+  year={2020}
+}
   ```
   
 ## Structure
