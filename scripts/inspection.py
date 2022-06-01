@@ -10,6 +10,9 @@ import json
 import pandas
 import traceback
 
+for p in ['FNs', 'FPs']:
+    os.makedirs(p, exist_ok=True)
+
 reported_bugs = []
 reported_non_injected = []
 tools = []
