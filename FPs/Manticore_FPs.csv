@@ -1,0 +1,4 @@
+BugType,FalsePositives,ExcludedByMajority,Total
+Re-entrancy,6,0,6
+Overflow-Underflow,9,0,9
+Other,169,0,169

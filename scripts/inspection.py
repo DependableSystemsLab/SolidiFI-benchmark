@@ -8,6 +8,7 @@ import inject_file
 import re
 import json
 import pandas
+import traceback
 
 reported_bugs = []
 reported_non_injected = []
@@ -471,6 +472,7 @@ def Inspect_results(_tools = []):
             print(df)
         except IOError:
             print("I/O error")
+            traceback.print_exc(file=sys.stdout)
     
     #Print to console
     #remove duplicates
@@ -651,6 +653,7 @@ def Inspect_results(_tools = []):
             print(df)
         except IOError:
             print("I/O error")
+            traceback.print_exc(file=sys.stdout)
 
 
 

@@ -1,0 +1,5 @@
+BugType,InjectedBugs,FalseNegatives,MisClassified,UnDetected
+Re-entrancy,1343,0,0,0
+Timestamp-Dependency,1381,537,536,1
+Unhandled-Exceptions,1374,457,329,128
+tx.origin,1336,0,0,0

@@ -1,0 +1,7 @@
+BugType,FalsePositives,ExcludedByMajority,Total
+Unhandled-Exceptions,0,0,0
+Timestamp-Dependency,0,0,0
+TOD,0,0,0
+Re-entrancy,0,0,0
+Overflow-Underflow,0,0,0
+Other,0,0,0
