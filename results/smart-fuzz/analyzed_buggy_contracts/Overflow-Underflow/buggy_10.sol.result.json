@@ -1,0 +1,34 @@
+{
+  "PC_2353": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 2353,
+    "function": "bug_intou39",
+    "input": [],
+    "line_number": 10,
+    "opcode": "SUB"
+  },
+  "PC_2367": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 2367,
+    "function": "bug_intou27",
+    "input": [],
+    "line_number": 85,
+    "opcode": "SUB"
+  },
+  "PC_2919": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 2919,
+    "function": "bug_intou31",
+    "input": [],
+    "line_number": 26,
+    "opcode": "SUB"
+  },
+  "PC_3429": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 3429,
+    "function": "bug_intou35",
+    "input": [],
+    "line_number": 50,
+    "opcode": "SUB"
+  }
+}
