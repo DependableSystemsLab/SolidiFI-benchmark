@@ -1,3 +1,9 @@
+# Usage:
+# python scripts/smart_fuzz.py -h
+#
+# Example:
+# python scripts/smart_fuzz.py -t Overflow-Underflow --print-details
+
 import csv
 from typing import Dict, Optional, List, Any
 from functools import cache
