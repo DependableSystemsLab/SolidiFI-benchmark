@@ -25,10 +25,14 @@ BUG_KEY_REPLACEMENT = {'loc': LINENUM,
 
 # Mapping from bugs reported by tools to injected bug types
 BUG_OVERFLOW_UNDERFLOW = 'Overflow-Underflow'
+BUG_REENTRANCY = 'Re-entrancy'
+BUG_TIMESTAMP_DEPENDENCY = 'Timestamp-Dependency'
 
 BUGTYPE_MAPPING = {
     'ARITHMETIC_UNDERFLOW':  BUG_OVERFLOW_UNDERFLOW,
     'ARITHMETIC_OVERFLOW': BUG_OVERFLOW_UNDERFLOW,
+    'REENTRANCY': BUG_REENTRANCY,
+    'TIME_STAMP_DEPENDENCY': BUG_TIMESTAMP_DEPENDENCY,
 }
 
 PATTERN_GROUND_TRUTH_CSV = '{parent}/{bugtype}/BugLog_{idx}.csv'
@@ -103,9 +107,10 @@ class InjectedBug():
                 return bug
         return None
 
-    def classify(self, reported_bugs: List[Dict[str, Any]], bug_type: str) -> Report:
+    def classify(self, reported_bugs: List[Dict[str, Any]]) -> Report:
         '''Classify a bug reported by tool to FP or NP'''
-        i_bugs = [bug for bug in self.bugs if bug.get(BUGTYPE) == bug_type]
+        # i_bugs = [bug for bug in self.bugs if bug.get(BUGTYPE) == self.bug_type]
+        i_bugs = list(self.bugs) # Each csv in `SolidiFI-benchmarks` contains only one type of bugs. So no need to filter 
         
         x_fp = []         # detected, but actually these is no bug
         x_tp = []         # detected the correct type
@@ -196,7 +201,7 @@ def print_report(report, print_raw: bool):
         pretty_print_report(report)
     
 def report_type(ibug: InjectedBug, rbug: ToolBug, print_raw: bool=False):
-    report = ibug.classify(rbug.get_bugs(), BUG_OVERFLOW_UNDERFLOW)
+    report = ibug.classify(rbug.get_bugs())
     print_report(report, print_raw)
 
 ################################################################################    
@@ -232,7 +237,8 @@ if __name__ == '__main__':
             report_type(InjectedBug(csv_path), SmartFuzzBug(report), print_raw=args.print_raw)
         else:
             print('=' * 80)
-            print(f'📛 missing report for {csv_path}')
+            contract = contract_path_from_csv(csv_path)
+            print(f'📛 missing report for {contract}')
         
         
     

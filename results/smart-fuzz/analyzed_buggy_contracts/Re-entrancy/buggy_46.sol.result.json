@@ -1,0 +1,1 @@
+{"PC_3627": {"bytecode_location": 3627, "function": "withdrawBalance_re_ent40", "bug_type": "REENTRANCY", "opcode": "CALL", "input": [], "line_number": 82}, "PC_6545": {"bytecode_location": 6545, "function": "withdrawBalance_re_ent33", "bug_type": "REENTRANCY", "opcode": "CALL", "input": [], "line_number": 105}}
