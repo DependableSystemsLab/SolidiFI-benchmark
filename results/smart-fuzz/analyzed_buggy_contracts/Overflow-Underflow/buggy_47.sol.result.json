@@ -1,1 +1,247 @@
-{"PC_9367": {"bytecode_location": 9367, "function": "invest", "bug_type": "TIME_STAMP_DEPENDENCY", "opcode": "NA", "input": [], "line_number": 396}, "PC_11723": {"bytecode_location": 11723, "function": "bug_intou31", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 484}, "PC_13572": {"bytecode_location": 13572, "function": "transfer_intou30", "bug_type": "ARITHMETIC_OVERFLOW", "opcode": "ADD", "input": ["0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf", 1], "line_number": 365}, "PC_12239": {"bytecode_location": 12239, "function": "bug_intou7", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 213}, "PC_13495": {"bytecode_location": 13495, "function": "transfer_intou30", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": ["0x2946259E0334f33A064106302415aD3391BeD384", 127], "line_number": 364}, "PC_13822": {"bytecode_location": 13822, "function": "transfer_intou10", "bug_type": "ARITHMETIC_OVERFLOW", "opcode": "ADD", "input": ["0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf", 1], "line_number": 271}, "PC_8896": {"bytecode_location": 8896, "function": "transfer_intou18", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": ["0xDe09E74d4888Bc4e65F589e8c13Bce9F71DdF4c7", 1], "line_number": 78}, "PC_12696": {"bytecode_location": 12696, "function": "transfer_intou14", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": ["0x51a240271AB8AB9f9a21C82d9a85396b704E164d", 1], "line_number": 351}, "PC_8446": {"bytecode_location": 8446, "function": "transfer_intou62", "bug_type": "ARITHMETIC_OVERFLOW", "opcode": "ADD", "input": ["0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf", 1], "line_number": 99}, "PC_9212": {"bytecode_location": 9212, "function": "bug_intou11", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 296}, "PC_9542": {"bytecode_location": 9542, "function": "transfer_undrflow2", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": ["0x5CF7F96627F3C9903763d128A1cc5D97556A6b99", 1], "line_number": 316}, "PC_12047": {"bytecode_location": 12047, "function": "bug_intou35", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 437}, "PC_10517": {"bytecode_location": 10517, "function": "bug_intou23", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 227}, "PC_9619": {"bytecode_location": 9619, "function": "transfer_undrflow2", "bug_type": "ARITHMETIC_OVERFLOW", "opcode": "ADD", "input": ["0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf", 127], "line_number": 317}, "PC_13745": {"bytecode_location": 13745, "function": "transfer_intou10", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": ["0x00De48310d77A4d56aa400248b0B1613508f5B73", 127], "line_number": 270}, "PC_12773": {"bytecode_location": 12773, "function": "transfer_intou14", "bug_type": "ARITHMETIC_OVERFLOW", "opcode": "ADD", "input": ["0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf", 65535], "line_number": 352}, "PC_10465": {"bytecode_location": 10465, "function": "bug_intou27", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 475}, "PC_9240": {"bytecode_location": 9240, "function": "bug_intou3", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 37}, "PC_11192": {"bytecode_location": 11192, "function": "bug_intou19", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 66}, "PC_8369": {"bytecode_location": 8369, "function": "transfer_intou62", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": ["0xcd75Ad7AC9C9325105f798c476E84176648F391A", 127], "line_number": 98}, "PC_14431": {"bytecode_location": 14431, "function": "transfer_intou22", "bug_type": "ARITHMETIC_OVERFLOW", "opcode": "ADD", "input": ["0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf", 1], "line_number": 281}, "PC_14354": {"bytecode_location": 14354, "function": "transfer_intou22", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": ["0x3d3955aAe5Bdf9E6547A140Baad4BC57Fa4EBA17", 65535], "line_number": 280}, "PC_10010": {"bytecode_location": 10010, "function": "transfer_intou34", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": ["0x3Bb7f1A59bDE3B61a0d537723E4e27D022489635", 1], "line_number": 246}, "PC_8973": {"bytecode_location": 8973, "function": "transfer_intou18", "bug_type": "ARITHMETIC_OVERFLOW", "opcode": "ADD", "input": ["0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf", 127], "line_number": 79}, "PC_10357": {"bytecode_location": 10357, "function": "bug_intou39", "bug_type": "ARITHMETIC_UNDERFLOW", "opcode": "SUB", "input": [], "line_number": 386}}
+{
+  "PC_10010": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 10010,
+    "function": "transfer_intou34",
+    "input": [
+      "0x3Bb7f1A59bDE3B61a0d537723E4e27D022489635",
+      1
+    ],
+    "line_number": 246,
+    "opcode": "SUB"
+  },
+  "PC_10357": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 10357,
+    "function": "bug_intou39",
+    "input": [],
+    "line_number": 386,
+    "opcode": "SUB"
+  },
+  "PC_10465": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 10465,
+    "function": "bug_intou27",
+    "input": [],
+    "line_number": 475,
+    "opcode": "SUB"
+  },
+  "PC_10517": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 10517,
+    "function": "bug_intou23",
+    "input": [],
+    "line_number": 227,
+    "opcode": "SUB"
+  },
+  "PC_11192": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 11192,
+    "function": "bug_intou19",
+    "input": [],
+    "line_number": 66,
+    "opcode": "SUB"
+  },
+  "PC_11723": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 11723,
+    "function": "bug_intou31",
+    "input": [],
+    "line_number": 484,
+    "opcode": "SUB"
+  },
+  "PC_12047": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 12047,
+    "function": "bug_intou35",
+    "input": [],
+    "line_number": 437,
+    "opcode": "SUB"
+  },
+  "PC_12239": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 12239,
+    "function": "bug_intou7",
+    "input": [],
+    "line_number": 213,
+    "opcode": "SUB"
+  },
+  "PC_12696": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 12696,
+    "function": "transfer_intou14",
+    "input": [
+      "0x51a240271AB8AB9f9a21C82d9a85396b704E164d",
+      1
+    ],
+    "line_number": 351,
+    "opcode": "SUB"
+  },
+  "PC_12773": {
+    "bug_type": "ARITHMETIC_OVERFLOW",
+    "bytecode_location": 12773,
+    "function": "transfer_intou14",
+    "input": [
+      "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+      65535
+    ],
+    "line_number": 352,
+    "opcode": "ADD"
+  },
+  "PC_13495": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 13495,
+    "function": "transfer_intou30",
+    "input": [
+      "0x2946259E0334f33A064106302415aD3391BeD384",
+      127
+    ],
+    "line_number": 364,
+    "opcode": "SUB"
+  },
+  "PC_13572": {
+    "bug_type": "ARITHMETIC_OVERFLOW",
+    "bytecode_location": 13572,
+    "function": "transfer_intou30",
+    "input": [
+      "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+      1
+    ],
+    "line_number": 365,
+    "opcode": "ADD"
+  },
+  "PC_13745": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 13745,
+    "function": "transfer_intou10",
+    "input": [
+      "0x00De48310d77A4d56aa400248b0B1613508f5B73",
+      127
+    ],
+    "line_number": 270,
+    "opcode": "SUB"
+  },
+  "PC_13822": {
+    "bug_type": "ARITHMETIC_OVERFLOW",
+    "bytecode_location": 13822,
+    "function": "transfer_intou10",
+    "input": [
+      "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+      1
+    ],
+    "line_number": 271,
+    "opcode": "ADD"
+  },
+  "PC_14354": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 14354,
+    "function": "transfer_intou22",
+    "input": [
+      "0x3d3955aAe5Bdf9E6547A140Baad4BC57Fa4EBA17",
+      65535
+    ],
+    "line_number": 280,
+    "opcode": "SUB"
+  },
+  "PC_14431": {
+    "bug_type": "ARITHMETIC_OVERFLOW",
+    "bytecode_location": 14431,
+    "function": "transfer_intou22",
+    "input": [
+      "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+      1
+    ],
+    "line_number": 281,
+    "opcode": "ADD"
+  },
+  "PC_8369": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 8369,
+    "function": "transfer_intou62",
+    "input": [
+      "0xcd75Ad7AC9C9325105f798c476E84176648F391A",
+      127
+    ],
+    "line_number": 98,
+    "opcode": "SUB"
+  },
+  "PC_8446": {
+    "bug_type": "ARITHMETIC_OVERFLOW",
+    "bytecode_location": 8446,
+    "function": "transfer_intou62",
+    "input": [
+      "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+      1
+    ],
+    "line_number": 99,
+    "opcode": "ADD"
+  },
+  "PC_8896": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 8896,
+    "function": "transfer_intou18",
+    "input": [
+      "0xDe09E74d4888Bc4e65F589e8c13Bce9F71DdF4c7",
+      1
+    ],
+    "line_number": 78,
+    "opcode": "SUB"
+  },
+  "PC_8973": {
+    "bug_type": "ARITHMETIC_OVERFLOW",
+    "bytecode_location": 8973,
+    "function": "transfer_intou18",
+    "input": [
+      "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+      127
+    ],
+    "line_number": 79,
+    "opcode": "ADD"
+  },
+  "PC_9212": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 9212,
+    "function": "bug_intou11",
+    "input": [],
+    "line_number": 296,
+    "opcode": "SUB"
+  },
+  "PC_9240": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 9240,
+    "function": "bug_intou3",
+    "input": [],
+    "line_number": 37,
+    "opcode": "SUB"
+  },
+  "PC_9367": {
+    "bug_type": "TIME_STAMP_DEPENDENCY",
+    "bytecode_location": 9367,
+    "function": "invest",
+    "input": [],
+    "line_number": 396,
+    "opcode": "NA"
+  },
+  "PC_9542": {
+    "bug_type": "ARITHMETIC_UNDERFLOW",
+    "bytecode_location": 9542,
+    "function": "transfer_undrflow2",
+    "input": [
+      "0x5CF7F96627F3C9903763d128A1cc5D97556A6b99",
+      1
+    ],
+    "line_number": 316,
+    "opcode": "SUB"
+  },
+  "PC_9619": {
+    "bug_type": "ARITHMETIC_OVERFLOW",
+    "bytecode_location": 9619,
+    "function": "transfer_undrflow2",
+    "input": [
+      "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+      127
+    ],
+    "line_number": 317,
+    "opcode": "ADD"
+  }
+}
