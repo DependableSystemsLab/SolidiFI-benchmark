@@ -33,6 +33,7 @@ BUG_TIMESTAMP_DEPENDENCY = 'Timestamp-Dependency'
 BUGTYPE_MAPPING = {
     'ARITHMETIC_UNDERFLOW':  BUG_OVERFLOW_UNDERFLOW,
     'ARITHMETIC_OVERFLOW': BUG_OVERFLOW_UNDERFLOW,
+    'DANGEROUS_AND:EVM_INTEGER_OVERFLOW_SUBTYPE': BUG_OVERFLOW_UNDERFLOW,
     'REENTRANCY': BUG_REENTRANCY,
     'TIME_STAMP_DEPENDENCY': BUG_TIMESTAMP_DEPENDENCY,
 }
@@ -209,9 +210,10 @@ def print_report(report, print_raw: bool):
     else:
         pretty_print_report(report)
     
-def report_type(ibug: InjectedBug, rbug: ToolBug, print_raw: bool=False):
+def report_type(ibug: InjectedBug, rbug: ToolBug, print_raw: bool=False)->ReportStats:
     report = ibug.classify(rbug.get_bugs())
     print_report(report, print_raw)
+    return report.stats
 
 ################################################################################    
         
@@ -229,6 +231,7 @@ if __name__ == '__main__':
     ap.add_argument('-t', '--bug-type', type=str, help=f'Bug type. Supported bug types: {", ".join(supported_bugs)}', required=True)
     ap.add_argument('-i', '--index', type=int, help='Bug index')
     ap.add_argument('--print-raw', action='store_true', help='Flag to print raw data of report results', default=False)
+    ap.add_argument('--print-summary', action='store_true', help='Flag to print summary of report results', default=False)
     args = ap.parse_args()
 
     if args.bug_type not in BUGTYPE_MAPPING.values():
@@ -238,18 +241,32 @@ if __name__ == '__main__':
 
     ground_truth_csvs = sorted(glob.glob(os.path.join(args.inject_contract_folder, args.bug_type, '*.csv')))
     report_files = sorted(SmartFuzzBug.gen_report_file(args.tool_report_folder, args.bug_type))
-
+    summary = {
+                "Total": 0,
+                "TP": 0,
+                "FP": 0,
+                "FN": 0,
+                "Misclassified": 0
+              }
     for csv_path in sorted(ground_truth_csvs, key=idx_from_file):
         idx = idx_from_file(csv_path)
         if args.index and args.index != idx:
             continue
         report = report_file_by_idx(report_files, idx)
         if report:
-            report_type(InjectedBug(csv_path), SmartFuzzBug(report), print_raw=args.print_raw)
+            stats = report_type(InjectedBug(csv_path), SmartFuzzBug(report), print_raw=args.print_raw)
+            summary["Total"] += stats.tp + stats.fp + stats.fn 
+            summary["TP"] += stats.tp
+            summary["FP"] += stats.fp
+            summary["FN"] += stats.fn
+            summary["Misclassified"] +=  stats.miscls
         else:
             print('=' * 80)
             contract = contract_path_from_csv(csv_path)
             print(f'📛 missing report for {contract}')
-        
+    if (args.print_summary):
+        print ("*"*80)
+        print ("Summary :")
+        print (summary)
         
     
