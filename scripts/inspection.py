@@ -787,8 +787,8 @@ def extract(obj, arr, key):
 
 if __name__ == "__main__":
     if 1 != len(sys.argv):
-        if sys.argv[1] in ('--help', '-h'):
-            printUsage(sys.argv[0])
+        #if sys.argv[1] in ('--help', '-h'):
+            #printUsage(sys.argv[0])
                 
         tools= sys.argv[1].split(',')
         if 3 == len(sys.argv):
