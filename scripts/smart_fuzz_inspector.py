@@ -76,6 +76,7 @@ class ReportStats():
     fp: int
     tp: int
     fn: int
+    tp_range: int
     miscls: int
 
 @define
@@ -139,11 +140,8 @@ class InjectedBug():
 
         x_fn = [bug for bug in i_bugs if bug not in x_seen_ibugs]
         fn = len(i_bugs) - len(set([str(b) for b in x_seen_ibugs]))
-        # print('ibugs')
-        # print(f'{len(i_bugs)} {len(set([str(b) for b in i_bugs]))}')
-        # print('seen_bugs')
-        # print(f'{len(x_seen_ibugs)} {len(set([str(b) for b in x_seen_ibugs]))}')
-        stats = ReportStats(injected=len(i_bugs), fp=len(x_fp), tp=len(x_tp), miscls=len(x_miscls), fn=fn)
+        tp_range = len(i_bugs) - fn
+        stats = ReportStats(injected=len(i_bugs), fp=len(x_fp), tp=len(x_tp), tp_range=tp_range, miscls=len(x_miscls), fn=fn)
         return Report(stats=stats, fp=x_fp, tp=x_tp, miscls=x_miscls, fn=x_fn, csv_path=csv_path, contract_path=contract_path_from_csv(self.csv_path))
 
 ################################################################################
@@ -191,11 +189,11 @@ def pretty_print_bugs(report: Report, bugs):
             print(f'Line {start:>2}: {read_line(report.contract_path, start)}')
             
     
-def pretty_print_report(report):
+def pretty_print_report(report: Report):
     print('=' * 80)
     print(report.contract_path)
     stats = report.stats
-    print(f'Injected: {stats.injected:<3}  FP: {stats.fp:<3}  TP: {stats.tp:<3}  FN: {stats.fn:<3} ')
+    print(f'Injected: {stats.injected:<3}  FP: {stats.fp:<3}  TP: {stats.tp:<3} TP_RANGE: {stats.tp_range}  FN: {stats.fn:<3} ')
     if report.fn:
         print('False negatives:')
         pretty_print_bugs(report, report.fn)
