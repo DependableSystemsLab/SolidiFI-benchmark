@@ -333,7 +333,7 @@ def Inspect_results(_tools = []):
                     
                     cs_names = [names['names'] for names in contract_names_per_file if  names['file'] == tail]
                     for cs_name in cs_names[0]:
-                        result_file = injected_scs+"/results/buggy_"+str(cs)+".sol:"+cs_name+".json"
+                        result_file = injected_scs+"/results/buggy_"+str(cs)+".sol_"+cs_name+".json"
                         if not os.path.isfile(result_file):
                             continue
 
